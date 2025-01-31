@@ -4,7 +4,6 @@
   [[default]]
     icon_bell = False
     background_type = transparent
-    background_image = /home/giftedodd/.config/wallpapers/mainwall.png
     cursor_shape = ibeam
     font = Source Code Pro Medium 14
     show_titlebar = False
