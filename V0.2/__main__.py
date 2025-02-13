@@ -31,7 +31,7 @@ def get_requirements():
     elif ARGUMENT == "c":
         env = "private"
 
-    need_to_fill = (0, 9)
+    need_to_fill = (0, 8)
     condition = (current_wallpaper in need_to_fill and current_env == "public") or (current_env == "private")
     if condition:
         target_line = target_line.replace("scale", "fill")
