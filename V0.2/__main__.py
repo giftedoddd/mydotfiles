@@ -1,6 +1,5 @@
 from pathlib import Path
-import sys
-import os
+import sys, os, re
 
 PRIVATE_WALLPAPERS = Path().home().joinpath(".config/wallpapers/private")
 PUBLIC_WALLPAPERS = Path().home().joinpath(".config/wallpapers/public")
@@ -23,7 +22,7 @@ def get_requirements():
                 break
             seek += len(line.encode())
 
-    current_wallpaper = int(target_line.split(".")[-2][-1])
+    current_wallpaper = int(re.search(r"mainwall(\d+)", target_line).group(1))
     current_env = target_line.split("/")[-2]
 
     if ARGUMENT == "q":
