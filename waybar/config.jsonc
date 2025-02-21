@@ -1,0 +1,119 @@
+{
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["wireplumber", "clock", "backlight"],
+    "modules-right": ["custom/fan", "temperature", "memory", "cpu", "network#wifi", "network#ethernet","bluetooth", "clock#date", "battery"],
+    "hyprland/workspaces": {
+    	"format": "{icon}",
+	"tooltip": false,
+	"on-click": "activate",
+	"active-only":false,
+	"all-outputs":true,
+	"ignore-workspaces": ["10"],
+	"format-icons": {
+	   "1": "1: ",
+	   "2": "2: ",
+	   "3": "3: ",
+	   "4": "4: ",
+	   "5": "5: ",
+	   "6": "6: ",
+	   "7": "7: ",
+	   "8": "8: ",
+	   "9": "9: "
+    	}
+    },
+    "clock": {
+	"interval": 1,
+	"tooltip": false,
+        "format": "{:%H:%M:%S} "
+    },
+
+    "clock#date":{
+	"tooltip": false,
+	"format": "{:%y/%m/%d} "
+    },
+
+    "battery": {
+        "bat": "BAT0",
+        "states": {
+            "good": 70,
+            "warning": 30,
+            "critical": 10
+        },
+	"intervals": 60,
+	"format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "tooltip": false,
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "bluetooth":{
+	"format-disabled": "",
+	"format-off": "",
+	"format-on": "",
+	"format-connected": "",
+	"on-click": "",
+	"on-click-right": "",
+	"tooltip": false
+    },
+
+    "network#wifi":{
+       "interface": "wlo1",
+       "family": "ipv4",
+       "format-linked": "",
+       "format-disabled": "",
+       "format-wifi": "",
+       "format-disconnected": "",
+       "tooltip-format-wifi": "{essid}  {signalStrength}%\n{ipaddr}\n{bandwidthUpBytes}  {bandwidthDownBytes} ",
+       "tooltip-format-disconnected": "Disconnected",
+       "tooltip-format-disabled": "Disabled",
+       "tooltip-format-linked": "Disconnected"
+    },
+    "cpu":{
+	
+	"format": "🧠"
+},
+
+    "network#ethernet":{
+	"interface": "enp0s20f0u2",
+	"family": "ipv4",
+	"format-ethernet": "",
+	"format-disconnected": " ",
+	"format-disabled": " ",
+        "tooltip-format-ethernet": "{ipaddr}\n{bandwidthUpBytes}  {bandwidthDownBytes} ",
+	"tooltip-format-disconnected":"Disconnected",
+	"tooltip-format-disabled": "Disabled"
+    },
+
+    "memory": {
+    "format": "{percentage}% ",
+    "tooltip-format": "Swap: {swapPercentage}%\nRam: {percentage}%"
+},
+
+    "temperature":{
+	"thermal-zone":7,
+	"tooltip":false,
+	"critical-threshold": 70,
+	"format": "{temperatureC}° "
+    },
+
+    "wireplumber":{
+	"format": "{volume}% {icon}",
+	"format-muted": "",
+	 "format-icons": ["", ""],
+	 "tooltip": false
+    },
+
+    "backlight":{
+	"device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""],
+	"tooltip": false
+    },
+    "custom/fan":{
+    "exec": "sensors | awk '/cpu_fan:/ {print $2,$3}'",
+    "format": "{} ",
+    "interval": 5,
+    "tooltip": false
+    }
+}
