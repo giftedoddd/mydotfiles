@@ -1,0 +1,310 @@
+* {
+    border: none;
+    font-family: Font Awesome, Roboto, Arial, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+}
+
+.modules-right {
+	background-color: rgba(0,0,0,0.2);
+    margin: 2px 0px 0px 0px;
+    padding: 2px 5px 2px 5px;
+}
+.modules-center {
+	background-color: rgba(0,0,0,0.2);
+    margin: 2px 0px 0px 0px;
+    padding: 2px 5px 2px 5px;
+}
+.modules-left {
+    margin: 2px 0px 0px 0px;
+    padding: 2px 5px 2px 5px;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#workspaces button {
+    padding: 1px 5px;
+    background-color: transparent;
+    transition: none;
+
+}
+#workspaces button:hover {
+	box-shadow: inherit;
+	   background-color: rgba(0,0,0,1)
+}
+
+#workspaces button.active {
+	background-color: rgba(0,0,0,1);
+}
+
+#clock {
+   margin: 0px 10px 0px 10px
+}
+
+#clock#date {
+    margin: 0px 0px 0px 0px;
+}
+
+@keyframes batteryCritical {
+  0% {
+    opacity: 0.5;
+    color: #ff1a00; /* White */
+  }
+  10% {
+    opacity: 0.6;
+    color: #ff1a00; /* White */
+  }
+  20% {
+    opacity: 0.7;
+    color: #ff1a00; /* White */
+  }
+  30% {
+    opacity: 0.8;
+    color: #ff1a00; /* White */
+  }
+  40% {
+    opacity: 0.9;
+    color: #ff1a00; /* White */
+  }
+  50% {
+    opacity: 1;
+    color: #ff1a00; /* White */
+  }
+  60% {
+    opacity: 0.9;
+    color: #ff1a00; /* White */
+  }
+  70% {
+    opacity: 0.8;
+    color: #ff1a00; /* White */
+  }
+  80% {
+    opacity: 0.7;
+    color: #ff1a00; /* White */
+  }
+  90% {
+    opacity: 0.6;
+    color: #ff1a00; /* White */
+  }
+  100% {
+    opacity: 0.5;
+    color: #ff1a00; /* White */
+  }
+}
+
+@keyframes batteryWarning {
+  0% {
+    opacity: 0.5;
+    color: #ffca2b; /* White */
+  }
+  10% {
+    opacity: 0.6;
+    color: #ffca2b; /* White */
+  }
+  20% {
+    opacity: 0.7;
+    color: #ffca2b; /* White */
+  }
+  30% {
+    opacity: 0.8;
+    color: #ffca2b; /* White */
+  }
+  40% {
+    opacity: 0.9;
+    color: #ffca2b; /* White */
+  }
+  50% {
+    opacity: 1;
+    color: #ffca2b; /* White */
+  }
+  60% {
+    opacity: 0.9;
+    color: #ffca2b; /* White */
+  }
+  70% {
+    opacity: 0.8;
+    color: #ffca2b; /* White */
+  }
+  80% {
+    opacity: 0.7;
+    color: #ffca2b; /* White */
+  }
+  90% {
+    opacity: 0.6;
+    color: #ffca2b; /* White */
+  }
+  100% {
+    opacity: 0.5;
+    color: #ffca2b; /* White */
+  }
+}
+
+#battery {
+    margin: 0px 0px 0px 0px;
+}
+
+#battery.charging {
+    color: #fff;
+}
+
+#battery.warning:not(.charging) {
+    animation: batteryWarning 5s infinite;
+}
+
+#battery.critical:not(.charging) {
+    animation: batteryCritical 2s infinite;
+}
+
+@keyframes bluetoothConnected {
+  0% {
+    opacity: 0.5;
+    color: #1E90FF; /* Updated Blue */
+  }
+  10% {
+    opacity: 0.6;
+    color: #1E90FF; /* Updated Blue */
+  }
+  20% {
+    opacity: 0.7;
+    color: #1E90FF; /* Updated Blue */
+  }
+  30% {
+    opacity: 0.8;
+    color: #1E90FF; /* Updated Blue */
+  }
+  40% {
+    opacity: 0.9;
+    color: #1E90FF; /* Updated Blue */
+  }
+  50% {
+    opacity: 1;
+    color: #1E90FF; /* Updated Blue */
+  }
+  60% {
+    opacity: 0.9;
+    color: #1E90FF; /* Updated Blue */
+  }
+  70% {
+    opacity: 0.8;
+    color: #1E90FF; /* Updated Blue */
+  }
+  80% {
+    opacity: 0.7;
+    color: #1E90FF; /* Updated Blue */
+  }
+  90% {
+    opacity: 0.6;
+    color: #1E90FF; /* Updated Blue */
+  }
+  100% {
+    opacity: 0.5;
+    color: #1E90FF; /* Updated Blue */
+  }
+}
+
+@keyframes bluetoothOn {
+  0% {
+    opacity: 0.5;
+    color: #FFFFFF; /* White */
+  }
+  10% {
+    opacity: 0.6;
+    color: #FFFFFF; /* White */
+  }
+  20% {
+    opacity: 0.7;
+    color: #FFFFFF; /* White */
+  }
+  30% {
+    opacity: 0.8;
+    color: #FFFFFF; /* White */
+  }
+  40% {
+    opacity: 0.9;
+    color: #FFFFFF; /* White */
+  }
+  50% {
+    opacity: 1;
+    color: #FFFFFF; /* White */
+  }
+  60% {
+    opacity: 0.9;
+    color: #FFFFFF; /* White */
+  }
+  70% {
+    opacity: 0.8;
+    color: #FFFFFF; /* White */
+  }
+  80% {
+    opacity: 0.7;
+    color: #FFFFFF; /* White */
+  }
+  90% {
+    opacity: 0.6;
+    color: #FFFFFF; /* White */
+  }
+  100% {
+    opacity: 0.5;
+    color: #FFFFFF; /* White */
+  }
+}
+
+
+#bluetooth {
+    margin: 0px 0px 0px 10px;
+}
+
+#bluetooth.off {
+    color:#696969;
+}
+
+#bluetooth.on {
+    animation: bluetoothOn 10s infinite;
+}
+
+#bluetooth.connected {
+    animation: bluetoothConnected 5s infinite;
+}
+
+#network {
+    margin: 0px 2px 0px 5px;
+}
+
+#network.connected {
+    color: #FFFFFF;
+}
+
+#network.disconnected {
+    animation: bluetoothOn 5s infinite;
+}
+
+#network.disabled {
+    animation: bluetoothOn 5s infinite;
+}
+
+#network.linked {
+    animation: bluetoothOn 5s infinite;
+}
+
+#cpu {
+    margin: 0px 5px 0px 10px;
+    animation: bluetoothOn 5s infinite;
+}
+
+#memory {
+    margin: 0px 5px 0px 0px;
+}
+
+#temperature {
+    margin: 0px 10px 0px 10px;
+    color: #FFFFFF;
+}
+
+#temperature.critical {
+    color:#ff5733; 
+}
+
