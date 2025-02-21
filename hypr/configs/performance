@@ -13,7 +13,7 @@ xwayland {
 ###################
 
 $terminal = kitty
-$launcher = /home/giftedodd/.config/rofi/launchers/type-3/launcher.sh 
+$launcher = # Path to your app launcher
 
 #################
 ### AUTOSTART ###
