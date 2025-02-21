@@ -1,0 +1,8 @@
+[any]
+path = # Path to your wallpapers
+duration = "5m"
+sorting = "ascending"
+mode = "center"
+transition-time = 1500
+
+[default.transition.linear-blur]
