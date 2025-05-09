@@ -1,6 +1,13 @@
 #
 # ~/.bashrc
-#
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -33,4 +40,23 @@ if [ -f /home/giftedodd/.config/synth-shell/better-history.sh ] && [ -n "$( echo
 	source /home/giftedodd/.config/synth-shell/better-history.sh
 fi
 
+function yazi() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	/usr/bin/yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 alias dog=echo
+alias Bash="cd ~/Projects/Bash"
+alias Rust="cd ~/Projects/Rust"
+alias Python="cd ~/Projects/Python"
+alias Java="cd ~/Projects/Java"
+alias Dart="cd ~/Projects/Dart"
+alias venv="source ~/Projects/Python/TermoTrain/.venv/bin/activate"
+alias train=~/Projects/Python/TermoTrain/run.sh
