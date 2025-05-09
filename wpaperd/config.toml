@@ -1,5 +1,5 @@
 [any]
-path = # Path to your wallpapers
+path = "~/.config/wallpapers/"
 duration = "5m"
 sorting = "ascending"
 mode = "center"
