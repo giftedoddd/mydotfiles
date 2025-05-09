@@ -23,13 +23,3 @@ To get more information about setups open dirs from below.
 ### [TLP](tlp/)
 
 ### [Wpaperd](wpaperd/)
-
----
-
-## Get Started
-
-To get started with these dotfiles just clone the repository:
-
-   ```bash
-   git clone https://github.com/giftedoddd/mydotfiles.git
-   cd mydotfiles
