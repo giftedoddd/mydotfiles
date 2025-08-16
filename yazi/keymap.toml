@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
-[manager]
+[mgr]
 
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
@@ -97,7 +97,8 @@ keymap = [
 	{ on = [ "g", "D" ],       run = "cd ~/Projects/Dart", desc = "Goto Dart projects" },
 	{ on = [ "g", "B" ],       run = "cd ~/Projects/Bash", desc = "Goto Bash projects" },
 	{ on = [ "g", "J" ],       run = "cd ~/Projects/Java", desc = "Goto Java projects" },
-
+	{ on = [ "g", "W" ],       run = "cd ~/Projects/Work", desc = "Goto Work directory" },
+	{ on = [ "g", "j" ],       run = "cd ~/Projects/JS", desc = "Goto JS Projects" },
 		# Tabs
 	{ on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
 	{ on = "<C-t>", run = "close",  desc = "Hide the help" },
