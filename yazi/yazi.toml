@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[manager]
+[mgr]
 ratio          = [ 1, 2, 3 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
@@ -21,7 +21,7 @@ wrap            = "no"
 tab_size        = 4
 max_width       = 1500
 max_height      = 1500
-cache_dir       = "~/.cache/yazi/"
+cache_dir       = "/home/giftedodd/.cache/yazi/"
 image_delay     = 100
 image_filter    = "triangle"
 image_quality   = 90
@@ -68,7 +68,7 @@ prepend_rules = [
 	{ name = "*.py", use = "pycharm" },
 	{ name = "*.rs", use = "rustrover" },
 	{ name = "*.iml", use = "edit" },
-	{ name = "*.md", use = "vscode" },
+	{ name = "*.md", use = "edit" },
 	{ name = "*.sh", use = "edit" },
 	{ name = "*.html", use = "pycahrm" },
 	{ name = "*.css", use = "pycharm" },
