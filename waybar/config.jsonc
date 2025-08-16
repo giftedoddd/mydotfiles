@@ -1,7 +1,7 @@
 {
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["wireplumber", "clock", "backlight"],
-    "modules-right": ["custom/fan", "temperature", "memory", "cpu", "network#wifi", "network#ethernet","bluetooth", "clock#date", "battery"],
+    "modules-right": ["custom/keyboard", "custom/fan", "temperature", "memory", "network#wifi", "network#ethernet","bluetooth", "clock#date", "battery"],
     "hyprland/workspaces": {
     	"format": "{icon}",
 	"tooltip": false,
@@ -29,7 +29,7 @@
 
     "clock#date":{
 	"tooltip": false,
-	"format": "{:%y/%m/%d} "
+	"format": "{:%d/%m/%y} "
     },
 
     "battery": {
@@ -52,8 +52,6 @@
 	"format-off": "",
 	"format-on": "",
 	"format-connected": "",
-	"on-click": "",
-	"on-click-right": "",
 	"tooltip": false
     },
 
@@ -69,10 +67,6 @@
        "tooltip-format-disabled": "Disabled",
        "tooltip-format-linked": "Disconnected"
     },
-    "cpu":{
-	
-	"format": "🧠"
-},
 
     "network#ethernet":{
 	"interface": "enp0s20f0u2",
@@ -111,9 +105,15 @@
 	"tooltip": false
     },
     "custom/fan":{
-    "exec": "sensors | awk '/cpu_fan:/ {print $2,$3}'",
-    "format": "{} ",
-    "interval": 5,
-    "tooltip": false
-    }
+        "exec": "sensors | awk '/cpu_fan:/ {print $2,$3}'",
+        "format": "{} ",
+        "interval": 10,
+        "tooltip": false
+    },
+	"custom/keyboard":{
+		"exec": "~/.config/waybar/scripts/get_language.sh",
+		"format": "{}",
+		"interval": 5,
+		"tooltip": false
+	}
 }
