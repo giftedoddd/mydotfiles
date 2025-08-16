@@ -32,6 +32,7 @@ window#waybar {
     transition: none;
 
 }
+
 #workspaces button:hover {
 	box-shadow: inherit;
 	   background-color: rgba(0,0,0,1)
@@ -253,13 +254,12 @@ window#waybar {
   }
 }
 
-
 #bluetooth {
     margin: 0px 0px 0px 10px;
 }
 
 #bluetooth.off {
-    color:#696969;
+    animation: bluetoothOn 10s infinite;
 }
 
 #bluetooth.on {
@@ -308,3 +308,8 @@ window#waybar {
     color:#ff5733; 
 }
 
+#custom-keyboard {
+	font-weight: bold;
+	font-size: 17px;
+    margin: 0px 5px 1px 0px;
+}
